@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://use.fontawesome.com/releases/v5.4.1/css/all.css');
+
+mainContainer{
+    background: #26262B;
+    color: #ececec;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    display: grid;
+    grid-template-rows: 70px auto auto;
+    grid-auto-columns: auto;
+    grid-template-areas: 
+    "navBarContainer"
+    "mainBodyContainer"
+    "mainFooterContainer";
+    
+
+    navBar{
+        grid-area: navBarContainer;
+
+        display: grid;
+        grid-template-columns: 30% auto 20%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "left_navbar . right_navbar";
+
+        width:100%;
+
+        leftNavbar{
+            grid-area: left_navbar;
+            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+
+            width: auto;
+
+            cursor: pointer;
+
+            i:hover{
+                color: white;
+            }
+
+            div:hover{
+                color: white;
+            }
+        }
+
+        rightNavbar{
+            grid-area: right_navbar;
+
+            display: grid;
+            grid-auto-columns: 30% 30% auto;
+            grid-auto-rows: auto;
+            grid-template-areas: 
+            "contactLogoArea loginBtnArea languageArea";
+
+            contactLogo{
+                grid-area: contactLogoArea;
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+
+                cursor: pointer;
+            }
+
+            loginBtn{
+                grid-area: loginBtnArea;
+                font-size:10px; 
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: auto;
+                height: auto;
+
+                border: #ececec solid 2px;
+                border-radius: 20px;
+
+                margin: auto;
+                padding:10px 15px 10px 15px;
+
+                cursor: pointer;
+            }
+
+            language{
+                grid-area: languageArea;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+
+            }
+
+        }
+
+    }
+
+    mainBody{
+        grid-area: mainBodyContainer;
+
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "headerInBody"
+        "bodyInBody";
+
+        headerInBody{
+            grid-area: headerInBody;
+
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+            "mainHeader"
+            "descriptionHeader"
+            "buttonArea";
+
+            mainHeader{
+                grid-area: mainHeader;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font: bolder;
+                font-size: 30px;
+
+                margin-top:50px;
+            }
+
+            descriptionHeader{
+                grid-area: descriptionHeader;
+
+                margin-top:25px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                font: bolder;
+                font-size: 15px;
+                text-align: center;
+
+                div{
+                    width:60%;
+                }
+            }
+
+            buttonArea{
+                grid-area: buttonArea;
+
+                margin-top: 20px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                cursor: pointer;
+
+            }
+
+        }
+
+        bodyInBody{
+            grid-area: bodyInBody;
+
+            height: 600px;
+
+            margin-top: 100px;
+        }
+
+    }
+
+    mainFooter{
+        grid-area: mainFooterContainer;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "aboutArea"
+        "signUpArea";
+
+        about{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            grid-area: aboutArea;
+            padding: 0px 100px 0px 100px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            colDesctiption{
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-start;
+               align-self: flex-start;
+            }
+
+        }
+
+        signUp{
+            grid-area: signUpArea;
+            border-top: #ffffff40 solid 1px;
+            padding: 50px 0px 50px 0px;
+            margin: 0px 100px 0px 100px;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+
+    }
+
+}
+
+
+.discordlogo{
+    color: #ececec;
+    font-size: 30px;
+  }
+  
+  .contactlogo{
+    color: #ececec;
+    font-size: 20px;
+  }
+
+  .contactlogo:hover{
+      color: #ffffff;
+  }
+  
+  .languageLogo{
+    color: #ececec;
+    font-size: 30px;
+    margin-right:5px;
+  
+  }
+  
+  .leftBorder_language{
+    border-left: #ececec solid 1px;
+    height: 40%;
+    // position: fixed;
+    margin-left: -10px;
+    width: 20px;
+  
+  }
+  
+  .downloadBtn{
+    width: auto;
+  
+    padding: 10px 30px 10px 30px;
+    background: #ececec;
+    color: #000000;
+    margin-right: 50px;
+  
+    border-radius: 3px;
+  
+    transform: translateY(1px);
+  }
+  
+  .downloadBtn:hover{
+    transform: translateY(-1px);
+  }
+  
+  .openBrowserBtn{
+    
+    width: auto;
+  
+    padding: 10px 30px 10px 30px;
+    background: #5f78eb;
+    color: #ececec;
+  
+    border-radius: 3px;
+    transform: translateY(1px);
+  }
+  
+  .openBrowserBtn:hover{
+    transform: translateY(-1px);
+  }
+
+  
+.headerIncolDesctiption{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .descriptionInColDescrition:hover{
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .headerInsignUpArea{
+    font-size: 25px;
+  }
+  .descriptionInsignUpArea{
+    font-size: 15px;
+  }
+  
+  .signUpBtn{
+    font-size: 15px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    background:#7289DA;
+    color: #ffffff;
+    transform: translateY(1px);
+  }
+  
+  .signUpBtn:hover{
+    transform: translateY(-1px);
+  }
+  
+  .popUpUndergames{
+    position: absolute;
+    top:50px;
+    left:128px;
+    border-radius: 3px;
+    height: auto;
+    width:auto;
+    background: #ececec;
+    color: #000000;
+    padding: 10px 15px 10px 15px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    visibility: hidden;
+  
+  }
+
+  .popUpUnderdeveloper{
+    position: absolute;
+    top:50px;
+    left:225px;
+    border-radius: 3px;
+    height: auto;
+    width:auto;
+    background: #ececec;
+    color: #000000;
+    padding: 10px 15px 10px 15px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    visibility: hidden;
+  }
+
+  .popUpUndercommunity{
+    position: absolute;
+    top:50px;
+    left:305px;
+    border-radius: 3px;
+    height: auto;
+    width:auto;
+    background: #ececec;
+    color: #000000;
+    padding: 10px 15px 10px 15px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    visibility: hidden;
+  }
+
+  .popUpUnderhelp{
+    position: absolute;
+    top:50px;
+    left:390px;
+    border-radius: 3px;
+    height: auto;
+    width:auto;
+    background: #ececec;
+    color: #000000;
+    padding: 10px 15px 10px 15px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    visibility: hidden;
+  }
+  
+  .visibleForToggle{
+    visibility: visible;
+    animation: showPopUp 0.3s;
+  }
+
+  @keyframes showPopUp{
+    0% {
+		transform : scale(0) ;
+		opacity: 0;
+	}
+
+	100%{
+		transform:  scale(1);
+		opacity: 1;
+	}
+  }
+
+  .animationToTopOfBox{
+        animation: toTopMisteryBox 3s;
+  }
+
+  @keyframes toTopMisteryBox{
+      0%{
+          transform: translateY(0);
+      }
+
+      50%{
+        transform: translateY(-88px);
+      }
+
+      100%{
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes upDown{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+      transform: translateY(10px);
+    }
+
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  .animationShakeBox{
+      animation: shakeBox 0.7s;
+  }
+
+  @keyframes shakeBox{
+    10%, 90% {
+        transform: translate3d(-1px, 1px, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, -2px, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 4px, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, -4px, 0);
+      }
+  }
